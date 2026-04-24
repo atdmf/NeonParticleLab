@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Neon Particle Lab</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="app" aria-label="Neon Particle Lab">
+      <canvas id="field" aria-label="Interactive particle canvas"></canvas>
+
+      <section class="panel" aria-label="Particle controls">
+        <div class="brand">
+          <span class="mark" aria-hidden="true"></span>
+          <div>
+            <h1>Neon Particle Lab</h1>
+            <p id="stats">0 particles</p>
+          </div>
+        </div>
+
+        <div class="segmented" aria-label="Mode">
+          <button class="active" data-mode="orbit" type="button">Orbit</button>
+          <button data-mode="flow" type="button">Flow</button>
+          <button data-mode="burst" type="button">Burst</button>
+        </div>
+
+        <label class="control">
+          <span>Density</span>
+          <input id="density" type="range" min="90" max="520" value="260">
+        </label>
+
+        <label class="control">
+          <span>Energy</span>
+          <input id="energy" type="range" min="20" max="120" value="72">
+        </label>
+
+        <div class="actions">
+          <button id="shuffle" class="icon-button" type="button" title="Shuffle palette" aria-label="Shuffle palette">⟳</button>
+          <button id="freeze" class="icon-button" type="button" title="Pause animation" aria-label="Pause animation">Ⅱ</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
